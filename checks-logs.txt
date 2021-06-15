@@ -1,0 +1,180 @@
+=====================================
+ID of IProducts: 4
+Name of IProducts: Sour-cream
+Weight: 2.0
+Cost: 32.0
+Sum to pay: 64.0
+=====================================
+ID of IProducts: 4
+Name of IProducts: Sour-cream
+Weight: 3.0
+Cost: 32.0
+Sum to pay: 96.0
+=====================================
+ID of IProducts: 1
+Name of IProducts: Milk
+Weight: 1.0
+Cost: 30.0
+Sum to pay: 30.0
+=====================================
+ID of IProducts: 2
+Name of IProducts: Butter
+Weight: 19.0
+Cost: 200.0
+Sum to pay: 3800.0
+=====================================
+ID of IProducts: 1
+Name of IProducts: Milk
+Weight: 3.22
+Cost: 30.0
+Sum to pay: 96.60000000000001
+=====================================
+ID of IProducts: 4
+Name of IProducts: Sour-cream
+Weight: 4.0
+Cost: 32.0
+Sum to pay: 128.0
+=====================================
+ID of IProducts: 6
+Name of IProducts: Chocolate-butter
+Weight: 3.0 kg.
+Cost: 210.0$
+Sum to pay: 630.0$
+=====================================
+ID of IProducts: 5
+Name of IProducts: Ice-cream
+Weight: 3.0 kg.
+Cost: 225.0$
+Sum to pay: 675.0$
+=====================================
+ID of IProducts: 4
+Name of IProducts: Sour-cream
+Weight: 3.0 kg.
+Cost: 72.0$
+Sum to pay: 216.0$
+=====================================
+ID of IProducts: 2
+Name of IProducts: Butter
+Weight: 3.0 kg.
+Cost: 200.0$
+Sum to pay: 600.0$
+=====================================
+ID of IProducts: 4
+Name of IProducts: Sour-cream
+Weight: 3.0 kg.
+Cost: 72.0$
+Sum to pay: 216.0$
+=====================================
+ID of IProducts: 5
+Name of IProducts: Ice-cream
+Weight: 1.0 kg.
+Cost: 225.0$
+Sum to pay: 225.0$
+=====================================
+ID of IProducts: 10
+Name of IProducts: Cheddar
+Weight: 0.3 kg.
+Cost: 175.0$
+Sum to pay: 52.5$
+=====================================
+ID of IProducts: 1
+Name of IProducts: Milk
+Weight: 0.2 kg.
+Cost: 30.0$
+Sum to pay: 6.0$
+=====================================
+ID of IProducts: 8
+Name of IProducts: Yogurt
+Weight: 3.0 kg.
+Cost: 50.0$
+Sum to pay: 150.0$
+=====================================
+ID of IProducts: 5
+Name of IProducts: Ice-cream
+Weight: 1.0 kg.
+Cost: 225.0$
+Sum to pay: 225.0$
+=====================================
+ID of IProducts: 9
+Name of IProducts: Cream
+Weight: 0.6 kg.
+Cost: 60.0$
+Sum to pay: 36.0$
+=====================================
+ID of IProducts: 15
+Name of IProducts: Sausage
+Weight: 5.0 kg.
+Cost: 165.0$
+Sum to pay: 825.0$
+=====================================
+ID of IProducts: 14
+Name of IProducts: Chocolate-ice-cream
+Weight: 0.3 kg.
+Cost: 225.0$
+Sum to pay: 67.5$
+=====================================
+ID of IProducts: 19
+Name of IProducts: Hams
+Weight: 6.0 kg.
+Cost: 165.0$
+Sum to pay: 990.0$
+=====================================
+ID of IProducts: 19
+Name of IProducts: Hams
+Weight: 6.0 kg.
+Cost: 165.0$
+Sum to pay: 990.0$
+=====================================
+ID of product: 6
+Name of product: Chocolate-butter
+Weight: 1.0 kg.
+Cost: 210.0$
+Sum to pay: 210.0$
+=====================================
+ID of product: 2
+Name of product: Butter
+Weight: 2.0 kg.
+Cost: 200.0$
+Sum to pay: 400.0$
+=====================================
+ID of product: 2
+Name of product: Butter
+Weight: 2.0 kg.
+Cost: 200.0$
+Sum to pay: 400.0$
+=====================================
+ID of product: 16
+Name of product: Chicken
+Weight: 2.0 kg.
+Cost: 145.0$
+Sum to pay: 290.0$
+=====================================
+ID of product: 16
+Name of product: Chicken
+Weight: 1.0 kg.
+Cost: 145.0$
+Sum to pay: 145.0$
+=====================================
+ID of product: 16
+Name of product: Chicken
+Weight: 2.0 kg.
+Cost: 145.0$
+Sum to pay: 290.0$
+=====================================
+ID of product: 1
+Name of product: Milk
+Weight: 1.0 kg.
+Cost: 30.0$
+Sum to pay: 30.0$
+=====================================
+ID of product: 16
+Name of product: Ryazhanka
+Weight: 1.0 kg.
+Cost: 40.0$
+Sum to pay: 40.0$
+=====================================
+ID of product: 16
+Name of product: Sausage
+Weight: 1.0 kg.
+Cost: 165.0$
+Sum to pay: 165.0$

@@ -43,8 +43,8 @@ public class MilkProduct extends Product {
                 product.setId(Integer.parseInt(strings[0]));
                 product.setName(strings[1]);
                 product.setWeight(Double.parseDouble(strings[2]));
-                product.autoDelivery();
                 product.setCost(Double.parseDouble(strings[3]));
+                product.autoDelivery();
                 CashRegister.MILK_PRODUCTS_LIST.add(new MilkProduct(product.getId(), product.getName(), product.getWeight(),
                         product.getCost()));
 

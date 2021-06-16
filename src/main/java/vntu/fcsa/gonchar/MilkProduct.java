@@ -30,15 +30,19 @@ public class MilkProduct extends Product {
         this.cost = cost;
     }
 
+    public static MilkProduct createMilkProduct() {
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+        return context.getBean("milkProduct", MilkProduct.class);
+    }
 
     @Override
     public void readProducts() {
         try {
             Scanner scanner = new Scanner(new File(CashRegister.MILK_PRODUCTS_TXT), StandardCharsets.UTF_8);
             while (scanner.hasNextLine()) {
-                ClassPathXmlApplicationContext context =
-                        new ClassPathXmlApplicationContext("applicationContext.xml");
-                Product product = context.getBean("milkProduct", MilkProduct.class);
+
+                Product product = createMilkProduct();
                 String[] strings = scanner.nextLine().split(";");
                 product.setId(Integer.parseInt(strings[0]));
                 product.setName(strings[1]);
@@ -54,6 +58,5 @@ public class MilkProduct extends Product {
             ex.printStackTrace();
         }
         CashRegister.MILK_PRODUCTS_LIST.sort(Comparator.comparing(IProducts::getId));
-
     }
 }

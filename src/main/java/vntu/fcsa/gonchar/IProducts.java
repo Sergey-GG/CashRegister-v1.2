@@ -36,5 +36,5 @@ public interface IProducts {
         return 0;
     }
 
-
+    void readProducts();
 }

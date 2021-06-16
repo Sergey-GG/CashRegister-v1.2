@@ -2,6 +2,7 @@ package vntu.fcsa.gonchar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
@@ -83,24 +84,30 @@ public class Product implements IProducts {
         return String.format("\n%3s | %-20s | %6s | %5s", id, name, weight, cost);
     }
 
+    @Override
     public void readProducts() {
+    }
+    public static Product createProduct() {
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+        return context.getBean("product", Product.class);
     }
 
     public void autoDelivery() throws IOException {
         if (this.getWeight() < CashRegister.minWeight) {
             double deliveryCost = CashRegister.autoProductsDelivery * this.getCost() * 3 / 4;
-                System.out.println("\nStocks of product '" + this.getName()
-                        + "' depleted. Available quantity of product: "
-                        + this.getWeight() + " kg.\nDelivery in progress...");
-            if (deliveryCost <= CashRegister.cashInBank) {
+            System.out.println("\nStocks of product '" + this.getName()
+                    + "' depleted. Available quantity of product: "
+                    + this.getWeight() + " kg.\nDelivery in progress...");
+            if (deliveryCost <= CashRegister.getCashInBank()) {
                 this.setWeight(this.getWeight() + CashRegister.autoProductsDelivery);
-                CashRegister.cashInBank = CashRegister.cashInBank - deliveryCost;
+                CashRegister.setCashInBank(CashRegister.getCashInBank() - deliveryCost);
                 FileWriter fileWriter = new FileWriter(CashRegister.BANK);
-                fileWriter.write(String.valueOf(CashRegister.cashInBank));
+                fileWriter.write(String.valueOf(CashRegister.getCashInBank()));
                 fileWriter.close();
                 System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
                         +this.getWeight() + " kg.");
-            }else System.out.println("Not enough money for delivery.");
+            } else System.out.println("Not enough money for delivery.");
         }
     }
 }

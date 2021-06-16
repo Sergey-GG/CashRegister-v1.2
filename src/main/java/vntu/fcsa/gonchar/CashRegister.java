@@ -1,9 +1,13 @@
 package vntu.fcsa.gonchar;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
@@ -17,8 +21,8 @@ import java.util.*;
 
 @Component
 public class CashRegister {
-    static Double cashInCass;
-    static Double cashInBank;
+    private static Double cashInCass;
+    private static Double cashInBank;
     @Value("${cashRegister.model}")
     private String model;
     @Value("${cashRegister.batteryCharge}")
@@ -34,8 +38,54 @@ public class CashRegister {
     static final String CASS = "cass.txt";
     static final String CHECKS = "checks-logs.txt";
     static final String BANK = "bank.txt";
+    private IProducts products;
+    private IProducts milkProducts;
+    private IProducts meatProducts;
 
     private CashRegister() {
+    }
+
+    @PostConstruct
+    public void initMethod() throws IOException {
+        System.out.println("Initialization...");
+        readCass();
+    }
+
+    @PreDestroy
+    public void destroyMethod() {
+        writeMeats();
+        writeMilks();
+        System.out.println("\nClosing...\nProgram has bean closed.");
+    }
+
+    public static CashRegister createCashRegister() {
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+        return context.getBean("cashRegister", CashRegister.class);
+    }
+
+
+    @Autowired
+    private CashRegister(@Qualifier("product") IProducts products, @Qualifier("milkProduct") IProducts milkProducts, @Qualifier("meatProduct") IProducts meatProducts) {
+        this.meatProducts = meatProducts;
+        this.milkProducts = milkProducts;
+        this.products = products;
+    }
+
+    public static Double getCashInCass() {
+        return cashInCass;
+    }
+
+    public static void setCashInCass(Double cashInCass) {
+        CashRegister.cashInCass = cashInCass;
+    }
+
+    public static Double getCashInBank() {
+        return cashInBank;
+    }
+
+    public static void setCashInBank(Double cashInBank) {
+        CashRegister.cashInBank = cashInBank;
     }
 
     @Override
@@ -80,7 +130,7 @@ public class CashRegister {
         Scanner scanner = new Scanner(new File(CashRegister.CASS), StandardCharsets.UTF_8);
         while (scanner.hasNextLine()) {
             String[] strings = scanner.nextLine().split(";");
-            cashInCass = Double.parseDouble(strings[0]);
+            setCashInCass(Double.parseDouble(strings[0]));
         }
         Scanner scanner1 = new Scanner(new File(CashRegister.BANK), StandardCharsets.UTF_8);
         while (scanner1.hasNextLine()) {
@@ -92,14 +142,14 @@ public class CashRegister {
     }
 
     static void cassToBank() throws IOException {
-        double toBank = cashInCass - 10;
-        cashInCass = cashInCass - toBank;
-        cashInBank = cashInBank + toBank;
+        double toBank = getCashInCass() - 10;
+        setCashInCass(getCashInCass() - toBank);
+        setCashInBank(getCashInCass() + toBank);
         FileWriter fileWriter = new FileWriter(CashRegister.BANK);
-        fileWriter.write(String.valueOf(cashInBank));
+        fileWriter.write(String.valueOf(getCashInBank()));
         fileWriter.close();
         FileWriter fileWriter1 = new FileWriter(CashRegister.CASS);
-        fileWriter1.write(String.valueOf(cashInCass));
+        fileWriter1.write(String.valueOf(getCashInCass()));
         fileWriter1.close();
     }
 
@@ -107,7 +157,6 @@ public class CashRegister {
     static void remove() {
         System.out.println("Remove product from database (you must enter ID):");
         Scanner scanner = new Scanner(System.in);
-        Main.printProducts();
         if (scanner.hasNextInt()) {
             int idKey = scanner.nextInt();
             if (idKey <= MILK_PRODUCTS_LIST.size()) {
@@ -147,19 +196,16 @@ public class CashRegister {
     }
 
 
-    static void buyProducts() throws IOException {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+    void buyProducts() throws IOException {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter ID to select product:");
-        IProducts product = context.getBean("product", Product.class);
-        product = getIProducts(scan, product);
+        products = getProducts(scan, products);
         System.out.println("Enter weight to buy:");
         double weightToBuy = scan.nextDouble();
-        assert product != null;
-        if (weightToBuy <= product.getWeight()) {
-            double sum = weightToBuy * product.getCost();
-            product.setWeight(product.getWeight() - weightToBuy);
+        assert products != null;
+        if (weightToBuy <= products.getWeight()) {
+            double sum = weightToBuy * products.getCost();
+            products.setWeight(products.getWeight() - weightToBuy);
             readCass();
             double cash = cashInCass;
             cash += sum;
@@ -167,9 +213,9 @@ public class CashRegister {
             String strings = Main.readUsingBufferedReader();
             Date date = new Date();
             SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy\nHH:mm");
-            String check = "--------------------------------------\nID of product: " + product.getId()
-                    + "\nName of product: " + product.getName() + "\nWeight: " + weightToBuy
-                    + " kg.\nCost: " + product.getCost() + "$\nSum to pay: " + sum + "$\n\n"+format.format(date.getTime());
+            String check = "--------------------------------------\nID of product: " + products.getId()
+                    + "\nName of product: " + products.getName() + "\nWeight: " + weightToBuy
+                    + " kg.\nCost: " + products.getCost() + "$\nSum to pay: " + sum + "$\n\n" + format.format(date.getTime());
             System.out.println(check);
             try {
                 FileWriter fileWriter = new FileWriter(CashRegister.CHECKS);
@@ -189,12 +235,10 @@ public class CashRegister {
     }
 
     static void manualProductsDelivery() throws IOException {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter ID to select product:");
-        IProducts products = context.getBean("product", Product.class);
-        products = getIProducts(scan, products);
+        IProducts products = Product.createProduct();
+        products = getProducts(scan, products);
         System.out.println("Available quantity of product: "
                 + products.getWeight() + " kg.\nDo you want order delivery of product?");
         if (scan.next().equals("+")) {
@@ -213,7 +257,7 @@ public class CashRegister {
         } else System.out.println("Delivery was cancel.");
     }
 
-    public static IProducts getIProducts(Scanner scan, IProducts products) {
+    public static IProducts getProducts(Scanner scan, IProducts products) {
         int idKey = scan.nextInt();
         if (idKey <= MILK_PRODUCTS_LIST.size()) {
             products = MILK_PRODUCTS_LIST.get(idKey - 1);
@@ -223,30 +267,28 @@ public class CashRegister {
         return products;
     }
 
-    static void addProduct() {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MilkProduct product = context.getBean("milkProduct", MilkProduct.class);
+    void addProduct() {
         Scanner scan = new Scanner(System.in);
         System.out.println("\nEnter the product ID:");
-        product.setId(scan.nextInt());
+        products.setId(scan.nextInt());
         System.out.println("Enter the name of product:");
-        product.setName(scan.next());
+        products.setName(scan.next());
         System.out.println("Enter the weight of product:");
-        product.setWeight(scan.nextDouble());
+        products.setWeight(scan.nextDouble());
         System.out.println("Enter the product cost:");
-        product.setCost(scan.nextDouble());
-        String print = Main.printTitle() + "\n" + Main.printBorder() + product + "\n" + Main.printBorder();
+        products.setCost(scan.nextDouble());
+        String print = Main.printTitle() + "\n" + Main.printBorder() + products + "\n" + Main.printBorder();
         System.out.println(print);
         System.out.println("\nSave product?\nEnter the product type (meat or milk):");
         Scanner scanner = new Scanner(System.in);
         String key = scanner.nextLine();
         if (key.equals("milk")) {
-            CashRegister.putMilks(product);
+            CashRegister.putMilks(products);
             CashRegister.writeMilks();
             System.out.println(print);
             System.out.println("\nThis product was saved.");
         } else if (key.equals("meat")) {
-            CashRegister.putMeats(product);
+            CashRegister.putMeats(products);
             CashRegister.writeMeats();
             System.out.println(print);
             System.out.println("\nThis product was saved.");
@@ -256,28 +298,22 @@ public class CashRegister {
         }
     }
 
-
     void readProd() {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
-        Product products = context.getBean("milkProduct", MilkProduct.class);
-        Product product1 = context.getBean("meatProduct", MeatProduct.class);
-        products.readProducts();
-        product1.readProducts();
+        milkProducts.readProducts();
+        meatProducts.readProducts();
     }
 
     static void cashRegisterFunctional() throws IOException {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
-        CashRegister cashRegister = context.getBean("cashRegister", CashRegister.class);
-        readCass();
+        CashRegister cashRegister = createCashRegister();
         if (cashInCass >= maxCashInCass) {
             cassToBank();
         }
         cashRegister.readProd();
+        System.out.println("\nInitialization successfully completed!");
         System.out.println("\n" + cashRegister);
         writeMilks();
         writeMeats();
+
         System.out.println("\nSelect the desired option:\n*001 - Add product to database;" +
                 "\n*002 - Remove product from database;\n*003 - Show list of available products;" +
                 "\n*004 - Buy products;\n*005 - Order delivery of product;\n*006 - Switch off cash register.");
@@ -292,7 +328,7 @@ public class CashRegister {
             Scanner scanner = new Scanner(System.in);
             String optionKey = scanner.next();
             if (optionKey.equals(option1)) {
-                CashRegister.addProduct();
+                cashRegister.addProduct();
                 writeMilks();
                 writeMeats();
                 cashRegister.batteryDischarge();
@@ -310,7 +346,7 @@ public class CashRegister {
                 cashRegister.batteryDischarge();
                 cashRegister.printCharge();
             } else if (optionKey.equals(option4)) {
-                buyProducts();
+                cashRegister.buyProducts();
                 writeMilks();
                 writeMeats();
                 readCass();
@@ -327,6 +363,5 @@ public class CashRegister {
             }
         }
         System.out.println("\nThe cash register has been switched off or the battery has been discharged!");
-        context.close();
     }
 }

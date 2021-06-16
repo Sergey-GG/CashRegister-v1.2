@@ -30,14 +30,18 @@ public class MeatProduct extends Product {
         this.cost = cost;
     }
 
+    public static MeatProduct createMeatProduct() {
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+        return context.getBean("meatProduct", MeatProduct.class);
+    }
+
     @Override
     public void readProducts() {
         try {
             Scanner scanner = new Scanner(new File(CashRegister.MEAT_PRODUCTS_TXT), StandardCharsets.UTF_8);
             while (scanner.hasNextLine()) {
-                ClassPathXmlApplicationContext context =
-                        new ClassPathXmlApplicationContext("applicationContext.xml");
-                Product product = context.getBean("meatProduct", MeatProduct.class);
+                Product product = createMeatProduct();
                 String[] strings = scanner.nextLine().split(";");
                 int i = 0;
                 int id = CashRegister.MILK_PRODUCTS_LIST.size() + 1;

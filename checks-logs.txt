@@ -274,3 +274,30 @@ Sum to pay: 60.0$
 
 16 червня 2021
 09:51
+--------------------------------------
+ID of product: 16
+Name of product: Ryazhanka
+Weight: 1.0 kg.
+Cost: 40.0$
+Sum to pay: 40.0$
+
+17 червня 2021
+00:45
+--------------------------------------
+ID of product: 16
+Name of product: Sausage
+Weight: 1.0 kg.
+Cost: 165.0$
+Sum to pay: 165.0$
+
+17 червня 2021
+00:46
+--------------------------------------
+ID of product: 17
+Name of product: Sausage
+Weight: 1.0 kg.
+Cost: 165.0$
+Sum to pay: 165.0$
+
+17 червня 2021
+01:19

@@ -48,8 +48,8 @@ public class MeatProduct extends Product {
                 }
                 product.setName(strings[1]);
                 product.setWeight(Double.parseDouble(strings[2]));
-                product.autoDelivery();
                 product.setCost(Double.parseDouble(strings[3]));
+                product.autoDelivery();
                 CashRegister.MEAT_PRODUCTS_LIST.add(new MeatProduct(product.getId(), product.getName(), product.getWeight(),
                         product.getCost()));
 

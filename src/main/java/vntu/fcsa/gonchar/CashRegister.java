@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -16,8 +17,8 @@ import java.util.*;
 
 @Component
 public class CashRegister {
-    private static Double cashInCass;
-    private static Double cashInBank;
+    static Double cashInCass;
+    static Double cashInBank;
     @Value("${cashRegister.model}")
     private String model;
     @Value("${cashRegister.batteryCharge}")
@@ -164,10 +165,11 @@ public class CashRegister {
             cash += sum;
             String cashS = String.valueOf(cash);
             String strings = Main.readUsingBufferedReader();
+            Date date = new Date();
+            SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy\nHH:mm");
             String check = "--------------------------------------\nID of product: " + product.getId()
                     + "\nName of product: " + product.getName() + "\nWeight: " + weightToBuy
-                    + " kg.\nCost: " + product.getCost() + "$\nSum to pay: " + sum
-                    + "$";
+                    + " kg.\nCost: " + product.getCost() + "$\nSum to pay: " + sum + "$\n\n"+format.format(date.getTime());
             System.out.println(check);
             try {
                 FileWriter fileWriter = new FileWriter(CashRegister.CHECKS);
@@ -186,7 +188,7 @@ public class CashRegister {
         } else System.out.println("There is not enough product");
     }
 
-    static void manualProductsDelivery() {
+    static void manualProductsDelivery() throws IOException {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         Scanner scan = new Scanner(System.in);
@@ -199,8 +201,15 @@ public class CashRegister {
             System.out.println("Enter the weight of product for delivery:");
             double deliveryWeight = scan.nextDouble();
             System.out.println("Delivery in progress...");
-            products.setWeight(products.getWeight() + deliveryWeight);
-            System.out.println("Delivery successfully completed.");
+            double deliveryCost = deliveryWeight * products.getCost() * 3 / 4;
+            if (deliveryCost <= cashInBank) {
+                products.setWeight(products.getWeight() + deliveryWeight);
+                cashInBank = cashInBank - deliveryCost;
+                FileWriter fileWriter = new FileWriter(CashRegister.BANK);
+                fileWriter.write(String.valueOf(cashInBank));
+                fileWriter.close();
+                System.out.println("Delivery successfully completed.");
+            }
         } else System.out.println("Delivery was cancel.");
     }
 

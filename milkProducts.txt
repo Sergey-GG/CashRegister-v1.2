@@ -1,16 +1,16 @@
-1;Milk;6.8;30.0
-2;Butter;11.0;200.0
-3;Cheese;11.7;185.0
-4;Sour-cream;3.0;72.0
-5;Ice-cream;2.0;225.0
-6;Chocolate-butter;2.0;210.0
-7;Fermented milk;5.0;40.0
-8;Yogurt;1.0;50.0
-9;Cream;1.4;60.0
-10;Cheddar;3.7;175.0
-11;Curd;6.0;120.0
-12;Keefer;4.0;30.0
-13;Powdered-milk;10.0;100.0
-14;Chocolate-ice-cream;3.0;225.0
-15;Mozzarella;9.5;170.0
-16;Ryazhanka;3.0;40.0
+1;Milk;9.7;30.0
+2;Butter;9.7;200.0
+3;Cheese;12.0;185.0
+4;Sour-cream;12.0;72.0
+5;Ice-cream;11.0;225.0
+6;Chocolate-butter;11.0;210.0
+7;Fermented milk;11.0;40.0
+8;Yogurt;10.0;50.0
+9;Cream;10.4;60.0
+10;Cheddar;12.0;175.0
+11;Curd;12.0;120.0
+12;Keefer;10.0;30.0
+13;Powdered-milk;12.0;100.0
+14;Chocolate-ice-cream;12.0;225.0
+15;Mozzarella;12.0;170.0
+16;Ryazhanka;12.0;40.0

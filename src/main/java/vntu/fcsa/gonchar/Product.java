@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * VNTU-FCSA
  * 1-ICT-20(b)
@@ -83,14 +86,21 @@ public class Product implements IProducts {
     public void readProducts() {
     }
 
-    public void autoDelivery() {
+    public void autoDelivery() throws IOException {
         if (this.getWeight() < CashRegister.minWeight) {
-            System.out.println("\nStocks of product '" + this.getName()
-                    + "' depleted. Available quantity of product: "
-                    + this.getWeight() + " kg.\nDelivery in progress...");
-            this.setWeight(this.getWeight() + CashRegister.autoProductsDelivery);
-            System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
-                    +this.getWeight() + " kg.");
+            double deliveryCost = CashRegister.autoProductsDelivery * this.getCost() * 3 / 4;
+                System.out.println("\nStocks of product '" + this.getName()
+                        + "' depleted. Available quantity of product: "
+                        + this.getWeight() + " kg.\nDelivery in progress...");
+            if (deliveryCost <= CashRegister.cashInBank) {
+                this.setWeight(this.getWeight() + CashRegister.autoProductsDelivery);
+                CashRegister.cashInBank = CashRegister.cashInBank - deliveryCost;
+                FileWriter fileWriter = new FileWriter(CashRegister.BANK);
+                fileWriter.write(String.valueOf(CashRegister.cashInBank));
+                fileWriter.close();
+                System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
+                        +this.getWeight() + " kg.");
+            }else System.out.println("Not enough money for delivery.");
         }
     }
 }

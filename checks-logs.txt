@@ -178,3 +178,99 @@ Name of product: Sausage
 Weight: 1.0 kg.
 Cost: 165.0$
 Sum to pay: 165.0$
+--------------------------------------
+ID of product: 17
+Name of product: Sausage
+Weight: 3.0 kg.
+Cost: 165.0$
+Sum to pay: 495.0$
+--------------------------------------
+ID of product: 14
+Name of product: Chocolate-ice-cream
+Weight: 3.0 kg.
+Cost: 225.0$
+Sum to pay: 675.0$
+--------------------------------------
+ID of product: 11
+Name of product: Curd
+Weight: 6.0 kg.
+Cost: 120.0$
+Sum to pay: 720.0$
+--------------------------------------
+ID of product: 15
+Name of product: Mozzarella
+Weight: 3.0 kg.
+Cost: 170.0$
+Sum to pay: 510.0$
+--------------------------------------
+ID of product: 19
+Name of product: Pork
+Weight: 3.0 kg.
+Cost: 170.0$
+Sum to pay: 510.0$
+--------------------------------------
+ID of product: 14
+Name of product: Chocolate-ice-cream
+Weight: 3.0 kg.
+Cost: 225.0$
+Sum to pay: 675.0$
+--------------------------------------
+ID of product: 1
+Name of product: Milk
+Weight: 16.8 kg.
+Cost: 30.0$
+Sum to pay: 504.0$
+--------------------------------------
+ID of product: 2
+Name of product: Butter
+Weight: 3.0 kg.
+Cost: 200.0$
+Sum to pay: 600.0$
+--------------------------------------
+ID of product: 2
+Name of product: Butter
+Weight: 1.0 kg.
+Cost: 200.0$
+Sum to pay: 200.0$
+--------------------------------------
+ID of product: 2
+Name of product: Butter
+Weight: 1.0 kg.
+Cost: 200.0$
+Sum to pay: 200.0$
+1623825958407
+--------------------------------------
+ID of product: 1
+Name of product: Milk
+Weight: 1.0 kg.
+Cost: 30.0$
+Sum to pay: 30.0$
+2021.06.16
+09:47
+--------------------------------------
+ID of product: 1
+Name of product: Milk
+Weight: 1.0 kg.
+Cost: 30.0$
+Sum to pay: 30.0$
+
+16 червня 2021
+09:49
+--------------------------------------
+ID of product: 1
+Name of product: Milk
+Weight: 0.3 kg.
+Cost: 30.0$
+Sum to pay: 9.0$
+
+16 червня 2021
+09:51
+--------------------------------------
+ID of product: 2
+Name of product: Butter
+Weight: 0.3 kg.
+Cost: 200.0$
+Sum to pay: 60.0$
+
+16 червня 2021
+09:51

@@ -3,8 +3,10 @@ package vntu.fcsa.gonchar;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
+import vntu.fcsa.gonchar.config.SpringConfig;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -59,8 +61,7 @@ public class CashRegister {
     }
 
     public static CashRegister createCashRegister() {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(SpringConfig.class);
         return context.getBean("cashRegister", CashRegister.class);
     }
 

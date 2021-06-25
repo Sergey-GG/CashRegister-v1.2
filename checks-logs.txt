@@ -346,3 +346,12 @@ Sum to pay: 60.0$
 
 24 червня 2021
 10:30
+--------------------------------------
+ID of product: 1
+Name of product: Milk
+Weight: 1.0 kg.
+Cost: 30.0$
+Sum to pay: 30.0$
+
+25 червня 2021
+22:43

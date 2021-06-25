@@ -1,8 +1,10 @@
 package vntu.fcsa.gonchar;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
+import vntu.fcsa.gonchar.config.SpringConfig;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,8 +33,7 @@ public class MeatProduct extends Product {
     }
 
     public static MeatProduct createMeatProduct() {
-        ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext.xml");
+        AnnotationConfigApplicationContext context= new AnnotationConfigApplicationContext(SpringConfig.class);
         return context.getBean("meatProduct", MeatProduct.class);
     }
 

@@ -66,7 +66,8 @@ public class CashRegister {
 
 
     @Autowired
-    private CashRegister(@Qualifier("product") IProducts products, @Qualifier("milkProduct") IProducts milkProducts, @Qualifier("meatProduct") IProducts meatProducts) {
+    private CashRegister(@Qualifier("product") IProducts products, @Qualifier("milkProduct") IProducts milkProducts,
+                         @Qualifier("meatProduct") IProducts meatProducts) {
         this.meatProducts = meatProducts;
         this.milkProducts = milkProducts;
         this.products = products;
@@ -102,17 +103,17 @@ public class CashRegister {
     }
 
     static ArrayList<IProducts> getDataMeats() {
-        ArrayList<IProducts> out1 = new ArrayList<>(MEAT_PRODUCTS_LIST);
-        Collections.copy(out1, MEAT_PRODUCTS_LIST);
-        return out1;
+        ArrayList<IProducts> out = new ArrayList<>(MEAT_PRODUCTS_LIST);
+        Collections.copy(out, MEAT_PRODUCTS_LIST);
+        return out;
     }
 
-    static void putMilks(IProducts IProducts) {
-        MILK_PRODUCTS_LIST.add(IProducts);
+    static void putMilks(IProducts iProducts) {
+        MILK_PRODUCTS_LIST.add(iProducts);
     }
 
-    static void putMeats(IProducts IProducts) {
-        MEAT_PRODUCTS_LIST.add(IProducts);
+    static void putMeats(IProducts iProducts) {
+        MEAT_PRODUCTS_LIST.add(iProducts);
     }
 
     void batteryDischarge() {
@@ -154,17 +155,19 @@ public class CashRegister {
     }
 
 
-    static void remove() {
+    static void removeProducts() {
         System.out.println("Remove product from database (you must enter ID):");
         Scanner scanner = new Scanner(System.in);
         if (scanner.hasNextInt()) {
             int idKey = scanner.nextInt();
             if (idKey <= MILK_PRODUCTS_LIST.size()) {
                 MILK_PRODUCTS_LIST.remove(idKey - 1);
+                System.out.println("Product has been removed");
             } else if (idKey <= (MILK_PRODUCTS_LIST.size() + MEAT_PRODUCTS_LIST.size())) {
                 MEAT_PRODUCTS_LIST.remove(idKey - MILK_PRODUCTS_LIST.size() - 1);
+                System.out.println("Product has been removed from database");
             } else System.out.println("Error!");
-        }
+        } else System.out.println("Input error.");
         System.out.println("Removing program has been closed.");
     }
 
@@ -173,8 +176,8 @@ public class CashRegister {
         try {
             FileWriter fileWriter = new FileWriter(CashRegister.MILK_PRODUCTS_TXT);
             MILK_PRODUCTS_LIST.sort(Comparator.comparing(IProducts::getId));
-            for (IProducts IProducts : MILK_PRODUCTS_LIST) {
-                fileWriter.write(IProducts.toProductsTXT());
+            for (IProducts iProducts : MILK_PRODUCTS_LIST) {
+                fileWriter.write(iProducts.toProductsTXT());
             }
             fileWriter.close();
         } catch (IOException e) {
@@ -186,8 +189,8 @@ public class CashRegister {
         try {
             FileWriter fileWriter = new FileWriter(CashRegister.MEAT_PRODUCTS_TXT);
             MEAT_PRODUCTS_LIST.sort(Comparator.comparing(IProducts::getId));
-            for (IProducts IProducts : MEAT_PRODUCTS_LIST) {
-                fileWriter.write(IProducts.toProductsTXT());
+            for (IProducts iProducts : MEAT_PRODUCTS_LIST) {
+                fileWriter.write(iProducts.toProductsTXT());
             }
             fileWriter.close();
         } catch (IOException e) {
@@ -196,65 +199,95 @@ public class CashRegister {
     }
 
 
-    void buyProducts() throws IOException {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter ID to select product:");
-        products = getProducts(scan, products);
-        System.out.println("Enter weight to buy:");
-        double weightToBuy = scan.nextDouble();
-        assert products != null;
-        if (weightToBuy <= products.getWeight()) {
-            double sum = weightToBuy * products.getCost();
-            products.setWeight(products.getWeight() - weightToBuy);
-            readCass();
-            double cash = cashInCass;
-            cash += sum;
-            String cashS = String.valueOf(cash);
-            String strings = Main.readUsingBufferedReader();
-            Date date = new Date();
-            SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy\nHH:mm");
-            String check = "--------------------------------------\nID of product: " + products.getId()
-                    + "\nName of product: " + products.getName() + "\nWeight: " + weightToBuy
-                    + " kg.\nCost: " + products.getCost() + "$\nSum to pay: " + sum + "$\n\n" + format.format(date.getTime());
-            System.out.println(check);
-            try {
-                FileWriter fileWriter = new FileWriter(CashRegister.CHECKS);
-                fileWriter.write(strings + "\n" + check);
-                fileWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            try {
-                FileWriter fileWriter = new FileWriter(CashRegister.CASS);
-                fileWriter.write(cashS);
-                fileWriter.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else System.out.println("There is not enough product");
+    void buyProducts() {
+        try {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("Enter ID to select product:");
+            products = getProducts(scan, products);
+            System.out.println("Enter weight to buy:");
+            double weightToBuy = scan.nextDouble();
+            assert products != null;
+            if (weightToBuy <= products.getWeight()) {
+                double sum = weightToBuy * products.getCost();
+                products.setWeight(products.getWeight() - weightToBuy);
+                try {
+                    readCass();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                double cash = cashInCass;
+                cash += sum;
+                String strings = null;
+                try {
+                    strings = Main.readUsingBufferedReader();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Date date = new Date();
+                SimpleDateFormat format = new SimpleDateFormat("dd MMMM yyyy\nHH:mm");
+                String check = "--------------------------------------\nID of product: " + products.getId()
+                        + "\nName of product: " + products.getName() + "\nWeight: " + weightToBuy
+                        + " kg.\nCost: " + products.getCost() + "$\nSum to pay: " + sum + "$\n\n" + format.format(date.getTime());
+                System.out.println(check);
+                try {
+                    FileWriter fileWriter = new FileWriter(CashRegister.CHECKS);
+                    fileWriter.write(strings + "\n" + check);
+                    fileWriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                try {
+                    FileWriter fileWriter = new FileWriter(CashRegister.CASS);
+                    fileWriter.write(String.valueOf(cash));
+                    fileWriter.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else System.out.println("There is not enough product");
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    static void manualProductsDelivery() throws IOException {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter ID to select product:");
-        IProducts products = Product.createProduct();
-        products = getProducts(scan, products);
-        System.out.println("Available quantity of product: "
-                + products.getWeight() + " kg.\nDo you want order delivery of product?");
-        if (scan.next().equals("+")) {
-            System.out.println("Enter the weight of product for delivery:");
-            double deliveryWeight = scan.nextDouble();
-            System.out.println("Delivery in progress...");
-            double deliveryCost = deliveryWeight * products.getCost() * 3 / 4;
-            if (deliveryCost <= cashInBank) {
-                products.setWeight(products.getWeight() + deliveryWeight);
-                cashInBank = cashInBank - deliveryCost;
-                FileWriter fileWriter = new FileWriter(CashRegister.BANK);
-                fileWriter.write(String.valueOf(cashInBank));
-                fileWriter.close();
-                System.out.println("Delivery successfully completed.");
-            }
-        } else System.out.println("Delivery was cancel.");
+    static void manualProductsDelivery() {
+        try {
+            Scanner scan = new Scanner(System.in);
+            IProducts products = Product.createProduct();
+            System.out.println("Enter ID to select product:");
+            products = getProducts(scan, products);
+            System.out.println("Available quantity of product: "
+                    + products.getWeight() + " kg.\nDo you want order delivery of product?");
+            if (scan.next().equals("+")) {
+                System.out.println("Enter the weight of product for delivery:");
+                double deliveryWeight = scan.nextDouble();
+                System.out.println("Delivery in progress...");
+                double deliveryCost = deliveryWeight * products.getCost() * 3 / 4;
+                if (deliveryCost <= cashInBank) {
+                    products.setWeight(products.getWeight() + deliveryWeight);
+                    cashInBank = cashInBank - deliveryCost;
+                    FileWriter fileWriter = null;
+                    try {
+                        fileWriter = new FileWriter(CashRegister.BANK);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        assert fileWriter != null;
+                        fileWriter.write(String.valueOf(cashInBank));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        fileWriter.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("Delivery successfully completed.");
+                } else System.out.println("Not enough money for delivery.");
+            } else System.out.println("Delivery was cancel.");
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public static IProducts getProducts(Scanner scan, IProducts products) {
@@ -269,32 +302,36 @@ public class CashRegister {
 
     void addProduct() {
         Scanner scan = new Scanner(System.in);
-        System.out.println("\nEnter the product ID:");
-        products.setId(scan.nextInt());
-        System.out.println("Enter the name of product:");
-        products.setName(scan.next());
-        System.out.println("Enter the weight of product:");
-        products.setWeight(scan.nextDouble());
-        System.out.println("Enter the product cost:");
-        products.setCost(scan.nextDouble());
-        String print = Main.printTitle() + "\n" + Main.printBorder() + products + "\n" + Main.printBorder();
-        System.out.println(print);
-        System.out.println("\nSave product?\nEnter the product type (meat or milk):");
-        Scanner scanner = new Scanner(System.in);
-        String key = scanner.nextLine();
-        if (key.equals("milk")) {
-            CashRegister.putMilks(products);
-            CashRegister.writeMilks();
+        try {
+            System.out.println("\nEnter the product ID:");
+            products.setId(scan.nextInt());
+            System.out.println("Enter the name of product:");
+            products.setName(scan.next());
+            System.out.println("Enter the weight of product:");
+            products.setWeight(scan.nextDouble());
+            System.out.println("Enter the product cost:");
+            products.setCost(scan.nextDouble());
+            String print = Main.printTitle() + "\n" + Main.printBorder() + products + "\n" + Main.printBorder();
             System.out.println(print);
-            System.out.println("\nThis product was saved.");
-        } else if (key.equals("meat")) {
-            CashRegister.putMeats(products);
-            CashRegister.writeMeats();
-            System.out.println(print);
-            System.out.println("\nThis product was saved.");
-        } else {
-            System.out.println(print);
-            System.out.println("\nThis product was removed.");
+            System.out.println("\nSave product?\nEnter the product type (meat or milk):");
+            Scanner scanner = new Scanner(System.in);
+            String key = scanner.nextLine();
+            if (key.equals("milk")) {
+                CashRegister.putMilks(products);
+                CashRegister.writeMilks();
+                System.out.println(print);
+                System.out.println("\nThis product was saved.");
+            } else if (key.equals("meat")) {
+                CashRegister.putMeats(products);
+                CashRegister.writeMeats();
+                System.out.println(print);
+                System.out.println("\nThis product was saved.");
+            } else {
+                System.out.println(print);
+                System.out.println("\nThis product was removed.");
+            }
+        } catch (InputMismatchException e) {
+            System.out.println(e.getMessage());
         }
     }
 
@@ -303,10 +340,14 @@ public class CashRegister {
         meatProducts.readProducts();
     }
 
-    static void cashRegisterFunctional() throws IOException {
+    static void cashRegisterFunctional() {
         CashRegister cashRegister = createCashRegister();
         if (cashInCass >= maxCashInCass) {
-            cassToBank();
+            try {
+                cassToBank();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         cashRegister.readProd();
         System.out.println("\nInitialization successfully completed!");
@@ -334,22 +375,24 @@ public class CashRegister {
                 cashRegister.batteryDischarge();
                 cashRegister.printCharge();
             } else if (optionKey.equals(option2)) {
-                remove();
+                removeProducts();
                 writeMilks();
                 writeMeats();
                 cashRegister.batteryDischarge();
                 cashRegister.printCharge();
             } else if (optionKey.equals(option3)) {
                 Main.printProducts();
-                writeMilks();
-                writeMeats();
                 cashRegister.batteryDischarge();
                 cashRegister.printCharge();
             } else if (optionKey.equals(option4)) {
                 cashRegister.buyProducts();
                 writeMilks();
                 writeMeats();
-                readCass();
+                try {
+                    readCass();
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
                 cashRegister.batteryDischarge();
                 cashRegister.printCharge();
             } else if (optionKey.equals(option5)) {
@@ -360,7 +403,7 @@ public class CashRegister {
                 cashRegister.printCharge();
             } else if (optionKey.equals(option6)) {
                 break;
-            }
+            } else System.out.println("Input error!");
         }
         System.out.println("\nThe cash register has been switched off or the battery has been discharged!");
     }

@@ -59,8 +59,8 @@ public class MeatProduct extends Product {
 
             }
             scanner.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IndexOutOfBoundsException | IOException ex) {
+            System.out.println(ex.getMessage());
         }
         CashRegister.MILK_PRODUCTS_LIST.sort(Comparator.comparing(IProducts::getId));
 

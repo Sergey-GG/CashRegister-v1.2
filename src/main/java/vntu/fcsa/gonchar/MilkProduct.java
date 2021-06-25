@@ -41,7 +41,6 @@ public class MilkProduct extends Product {
         try {
             Scanner scanner = new Scanner(new File(CashRegister.MILK_PRODUCTS_TXT), StandardCharsets.UTF_8);
             while (scanner.hasNextLine()) {
-
                 Product product = createMilkProduct();
                 String[] strings = scanner.nextLine().split(";");
                 product.setId(Integer.parseInt(strings[0]));
@@ -54,8 +53,8 @@ public class MilkProduct extends Product {
 
             }
             scanner.close();
-        } catch (IOException ex) {
-            ex.printStackTrace();
+        } catch (IOException | ArrayIndexOutOfBoundsException ex) {
+            System.out.println(ex.getMessage());
         }
         CashRegister.MILK_PRODUCTS_LIST.sort(Comparator.comparing(IProducts::getId));
     }

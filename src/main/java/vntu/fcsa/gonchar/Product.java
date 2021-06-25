@@ -87,27 +87,32 @@ public class Product implements IProducts {
     @Override
     public void readProducts() {
     }
+
     public static Product createProduct() {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
         return context.getBean("product", Product.class);
     }
 
-    public void autoDelivery() throws IOException {
-        if (this.getWeight() < CashRegister.minWeight) {
-            double deliveryCost = CashRegister.autoProductsDelivery * this.getCost() * 3 / 4;
-            System.out.println("\nStocks of product '" + this.getName()
-                    + "' depleted. Available quantity of product: "
-                    + this.getWeight() + " kg.\nDelivery in progress...");
-            if (deliveryCost <= CashRegister.getCashInBank()) {
-                this.setWeight(this.getWeight() + CashRegister.autoProductsDelivery);
-                CashRegister.setCashInBank(CashRegister.getCashInBank() - deliveryCost);
-                FileWriter fileWriter = new FileWriter(CashRegister.BANK);
-                fileWriter.write(String.valueOf(CashRegister.getCashInBank()));
-                fileWriter.close();
-                System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
-                        +this.getWeight() + " kg.");
-            } else System.out.println("Not enough money for delivery.");
+    public void autoDelivery() {
+        try {
+            if (this.getWeight() < CashRegister.minWeight) {
+                double deliveryCost = CashRegister.autoProductsDelivery * this.getCost() * 3 / 4;
+                System.out.println("\nStocks of product '" + this.getName()
+                        + "' depleted. Available quantity of product: "
+                        + this.getWeight() + " kg.\nDelivery in progress...");
+                if (deliveryCost <= CashRegister.getCashInBank()) {
+                    this.setWeight(this.getWeight() + CashRegister.autoProductsDelivery);
+                    CashRegister.setCashInBank(CashRegister.getCashInBank() - deliveryCost);
+                    FileWriter fileWriter = new FileWriter(CashRegister.BANK);
+                    fileWriter.write(String.valueOf(CashRegister.getCashInBank()));
+                    fileWriter.close();
+                    System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
+                            +this.getWeight() + " kg.");
+                } else System.out.println("Not enough money for delivery.");
+            }
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
         }
     }
 }

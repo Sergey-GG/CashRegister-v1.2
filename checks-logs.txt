@@ -301,3 +301,48 @@ Sum to pay: 165.0$
 
 17 червня 2021
 01:19
+--------------------------------------
+ID of product: 16
+Name of product: Chicken
+Weight: 0.5 kg.
+Cost: 145.0$
+Sum to pay: 72.5$
+
+17 червня 2021
+09:37
+--------------------------------------
+ID of product: 20
+Name of product: Hams
+Weight: 1.0 kg.
+Cost: 165.0$
+Sum to pay: 165.0$
+
+24 червня 2021
+10:27
+--------------------------------------
+ID of product: 21
+Name of product: fgjkl
+Weight: 1.0 kg.
+Cost: 60.0$
+Sum to pay: 60.0$
+
+24 червня 2021
+10:27
+--------------------------------------
+ID of product: 22
+Name of product: fgjkl
+Weight: 1.0 kg.
+Cost: 60.0$
+Sum to pay: 60.0$
+
+24 червня 2021
+10:29
+--------------------------------------
+ID of product: 22
+Name of product: fgjkl
+Weight: 1.0 kg.
+Cost: 60.0$
+Sum to pay: 60.0$
+
+24 червня 2021
+10:30

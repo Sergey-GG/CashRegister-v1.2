@@ -355,3 +355,21 @@ Sum to pay: 30.0$
 
 25 червня 2021
 22:43
+--------------------------------------
+ID of product: 12
+Name of product: Keefer
+Weight: 4.0 kg.
+Cost: 30.0$
+Sum to pay: 120.0$
+
+26 червня 2021
+14:28
+--------------------------------------
+ID of product: 17
+Name of product: Chicken
+Weight: 1.0 kg.
+Cost: 175.0$
+Sum to pay: 175.0$
+
+26 червня 2021
+21:53

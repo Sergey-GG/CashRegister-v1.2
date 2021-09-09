@@ -4,13 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 import vntu.fcsa.gonchar.config.SpringConfig;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -357,7 +358,8 @@ public class CashRegister {
         writeMeats();
 
         System.out.println("\nSelect the desired option:\n*001 - Add product to database;" +
-                "\n*002 - Remove product from database;\n*003 - Show list of available products;" +
+                "\n*002 - Remove product from database;" +
+                "\n*003 - Show list of available products;" +
                 "\n*004 - Buy products;\n*005 - Order delivery of product;\n*006 - Switch off cash register.");
 
         String option1 = "*001";

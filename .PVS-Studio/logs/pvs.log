@@ -1,136 +1,136 @@
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:64 - ********************************
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:65 - Native library search paths: 
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:948 - .
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..\..
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..\..\build
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:67 - Additional path: native/win
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:76 - Native library found: C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\native\win\analysis-core.dll
-2021-06-25 22:44:03 [INFO ] c.p.r.NativeLoader:77 - ********************************
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:49 - Module: CashRegister-v1.2
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:50 - Sources:
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/src/main/java
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:52 - Classpath:
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.security.sasl
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/platform/junit-platform-engine/1.8.0-M1/junit-platform-engine-1.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.editpad
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-jcl/5.1.4.RELEASE/spring-jcl-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.xml.crypto
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jartool
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jsobject
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-aop/5.1.4.RELEASE/spring-aop-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.0-M1/junit-jupiter-engine-5.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/platform/junit-platform-commons/1.8.0-M1/junit-platform-commons-1.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.0-M1/junit-jupiter-params-5.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.incubator.jpackage
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.naming
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management.jfr
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.annotation.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.xml
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.desktop
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.sql.rowset
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jstatd
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-expression/5.1.4.RELEASE/spring-expression-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.mscapi
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.attach
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.prefs
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.opt
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.charsets
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.unsupported.desktop
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.jms.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.sql
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-core/5.1.4.RELEASE/spring-core-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.aot
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdeps
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.smartcardio
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.se
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.security.jgss
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.cryptoki
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.nio.mapmode
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.20/kotlin-stdlib-common-1.4.20.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.persistence.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.20/kotlin-stdlib-jdk8-1.4.20.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management.agent
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.ejb.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.compiler
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.ed
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.localedata
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.0-M1/junit-jupiter-api-5.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.resource.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.datatransfer
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-beans/5.1.4.RELEASE/spring-beans-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.naming.dns
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.20/kotlin-stdlib-jdk7-1.4.20.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.base
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.transaction.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.transaction.xa
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.jvmstat
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.compiler
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.ec
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jcmd
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.security.jgss
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.accessibility
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.rmi
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.management
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.le
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jconsole
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jsp.jstl.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.httpserver
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.logging
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.unsupported
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.javadoc
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jsp.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jfr
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.compiler.management
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.hotspot.agent
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.zipfs
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.management.rmi
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jshell
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.security.auth
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.0-M1/junit-jupiter-5.8.0-M1.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.sctp
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdwp.agent
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.20/kotlin-stdlib-1.4.20.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.compiler
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.ci
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdi
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.naming.rmi
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.incubator.foreign
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.net
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.xml.dom
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/junit/junit/4.13/junit-4.13.jar
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.instrument
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jlink
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.scripting
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.dynalink
-2021-06-25 22:44:05 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.net.http
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:154 - Load model from cache...
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:168 - Build model incrementally...
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:169 - Current time: 1624650245704
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:170 - Last build time: 1624623869900
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:171 - Keyset size: 6
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:172 - Input sources size: 7
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:178 - Removed sources size: 0
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:179 - Added sources size: 1
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:180 - Common sources size: 7
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:191 - Incremental sources size: 6
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:194 - Old types size: 6
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:205 - Changed types size: 5
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:207 - Enter types loop
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:229 - Exit types loop
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:241 - Old packages size: 4
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:250 - Data processed
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:256 - Added: 1
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:257 - Removed: 0
-2021-06-25 22:44:05 [INFO ] c.p.p.IncrementalLauncher:258 - Modified : 5
-2021-06-25 22:44:06 [INFO ] c.p.p.IncrementalLauncher:312 - Cache saving started.
-2021-06-25 22:44:07 [INFO ] c.p.p.IncrementalLauncher:355 - Cache saving finished.
-2021-06-25 22:44:07 [INFO ] c.p.p.Module:383 - Model build success.
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:64 - ********************************
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:65 - Native library search paths: 
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:948 - .
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..\..
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:948 - C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\..\..\build
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:67 - Additional path: native/win
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:76 - Native library found: C:\Users\fsnge\AppData\Roaming\PVS-Studio-Java\7.13.48133\native\win\analysis-core.dll
+2021-06-26 21:21:58 [INFO ] c.p.r.NativeLoader:77 - ********************************
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:49 - Module: CashRegister-v1.2
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:50 - Sources:
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/src/main/java
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:52 - Classpath:
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.security.sasl
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/platform/junit-platform-engine/1.8.0-M1/junit-platform-engine-1.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.editpad
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-jcl/5.1.4.RELEASE/spring-jcl-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.xml.crypto
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jartool
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jsobject
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-aop/5.1.4.RELEASE/spring-aop-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.8.0-M1/junit-jupiter-engine-5.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/platform/junit-platform-commons/1.8.0-M1/junit-platform-commons-1.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.8.0-M1/junit-jupiter-params-5.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.incubator.jpackage
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.naming
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management.jfr
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.annotation.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.xml
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.desktop
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.sql.rowset
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jstatd
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-expression/5.1.4.RELEASE/spring-expression-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.mscapi
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.attach
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.prefs
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.opt
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.charsets
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.unsupported.desktop
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.jms.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.sql
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-core/5.1.4.RELEASE/spring-core-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.aot
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdeps
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.smartcardio
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.se
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.security.jgss
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.cryptoki
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.nio.mapmode
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.4.20/kotlin-stdlib-common-1.4.20.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.persistence.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.4.20/kotlin-stdlib-jdk8-1.4.20.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.management.agent
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.ejb.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.compiler
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.ed
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.localedata
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.8.0-M1/junit-jupiter-api-5.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.resource.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.datatransfer
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-beans/5.1.4.RELEASE/spring-beans-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.naming.dns
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.4.20/kotlin-stdlib-jdk7-1.4.20.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.base
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.transaction.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.transaction.xa
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.jvmstat
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.compiler
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.crypto.ec
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jcmd
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.security.jgss
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.accessibility
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.rmi
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.management
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.le
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jconsole
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jsp.jstl.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.httpserver
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.logging
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.unsupported
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.javadoc
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jsp.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jfr
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.compiler.management
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.hotspot.agent
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.zipfs
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/springframework/spring-context/5.1.4.RELEASE/spring-context-5.1.4.RELEASE.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/apiguardian/apiguardian-api/1.1.1/apiguardian-api-1.1.1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.management.rmi
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jshell
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.security.auth
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/Documents/GitHub/CashRegister-v1.2/lib/javax.servlet.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/junit/jupiter/junit-jupiter/5.8.0-M1/junit-jupiter-5.8.0-M1.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.sctp
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdwp.agent
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.4.20/kotlin-stdlib-1.4.20.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.compiler
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.internal.vm.ci
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jdi
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.naming.rmi
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.incubator.foreign
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.net
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.xml.dom
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Users/fsnge/.m2/repository/junit/junit/4.13/junit-4.13.jar
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.instrument
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.jlink
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.scripting
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/jdk.dynalink
+2021-06-26 21:21:58 [INFO ] c.p.p.JsonEvaluator:75 - C:/Program Files/AdoptOpenJDK/jdk-15.0.2.7-hotspot!/java.net.http
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:154 - Load model from cache...
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:168 - Build model incrementally...
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:169 - Current time: 1624731718931
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:170 - Last build time: 1624650247025
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:171 - Keyset size: 7
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:172 - Input sources size: 7
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:178 - Removed sources size: 0
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:179 - Added sources size: 0
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:180 - Common sources size: 7
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:191 - Incremental sources size: 4
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:194 - Old types size: 7
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:205 - Changed types size: 4
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:207 - Enter types loop
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:229 - Exit types loop
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:241 - Old packages size: 5
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:250 - Data processed
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:256 - Added: 0
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:257 - Removed: 0
+2021-06-26 21:21:58 [INFO ] c.p.p.IncrementalLauncher:258 - Modified : 5
+2021-06-26 21:21:59 [INFO ] c.p.p.IncrementalLauncher:312 - Cache saving started.
+2021-06-26 21:22:00 [INFO ] c.p.p.IncrementalLauncher:355 - Cache saving finished.
+2021-06-26 21:22:00 [INFO ] c.p.p.Module:383 - Model build success.

@@ -9,7 +9,7 @@
 9;Cream;10.4;60.0
 10;Cheddar;12.0;175.0
 11;Curd;12.0;120.0
-12;Keefer;10.0;30.0
+12;Keefer;6.0;30.0
 13;Powdered-milk;12.0;100.0
 14;Chocolate-ice-cream;12.0;225.0
 15;Mozzarella;12.0;170.0

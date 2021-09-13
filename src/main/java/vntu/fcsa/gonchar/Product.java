@@ -108,7 +108,7 @@ public class Product implements IProducts {
                     fileWriter.write(String.valueOf(CashRegister.getCashInBank()));
                     fileWriter.close();
                     System.out.println("Delivery successfully completed.\nAvailable quantity of product: " +
-                            +this.getWeight() + " kg.");
+                            this.getWeight() + " kg.");
                 } else System.out.println("Not enough money for delivery.");
             }
         } catch (IOException ex) {

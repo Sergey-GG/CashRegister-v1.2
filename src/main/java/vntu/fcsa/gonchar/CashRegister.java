@@ -42,11 +42,8 @@ public class CashRegister {
     static final String CHECKS = "checks-logs.txt";
     static final String BANK = "bank.txt";
     private IProducts products;
-    private IProducts milkProducts;
-    private IProducts meatProducts;
-
-    private CashRegister() {
-    }
+    private final IProducts milkProducts;
+    private final IProducts meatProducts;
 
     @PostConstruct
     public void initMethod() throws IOException {

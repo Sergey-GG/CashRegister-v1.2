@@ -33,7 +33,9 @@ All control commands are displayed in the console when the application starts.
 - Use of `Init`, `Destroy`, and Factory methods  
 - Exception handling  
 
+
 ---
+
 
 # Cash Register - [UA]
 

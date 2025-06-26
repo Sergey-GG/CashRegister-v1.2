@@ -1,4 +1,4 @@
-# [Cash Register - EN]
+# Cash Register - [EN]
 
 Cash register is software developed for educational purposes during my studies at VNTU. 
 The application simulates the operation of store cash registers.
@@ -32,7 +32,7 @@ Technologies used in development:
             - exception handling.
 
 
-# [Cash Register - UA]
+# Cash Register - [UA]
 
 Cash register — це програмне забезпечення, розроблене в освітніх цілях під час навчання у ВНТУ. 
 Додаток імітує роботу касових апаратів у магазині.

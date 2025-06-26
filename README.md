@@ -19,7 +19,7 @@ Application functionality:
                         milkProducts.txt — milk products,
                         meatProducts.txt — meat products;
             - The delivery cost is 75% of the product’s selling price, and the amount is deducted from the bank account.
-
+            
 Technologies used in development:
             - use of a configuration class to manage Spring Core tools;
             - use of @Component annotations for automatic bean creation;
